@@ -4,7 +4,8 @@ Vagrant.configure(2) do |config|
   
   #de poort 8080 die in demo gebruikt werd werkte niet bij mij, poort 3000 lijkt wel te gaan.
   config.vm.network "forwarded_port", guest: 80, host: 3000
+    
+  config.vm.provision "shell", path: "provision_apache.sh"
   
-  
-  
+     
 end
